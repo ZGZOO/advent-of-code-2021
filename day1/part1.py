@@ -13,3 +13,5 @@ for i in range (len(numArray) - 1):
     count = count + 1
 
 print(count)
+
+f.close()  # It's important to close the file when I'm done with it.

@@ -8,8 +8,26 @@ numArray = [int(i) for i in nums]
 
 count = 0
 
+# First Attempt:
+# ----------------
+# def compareSumThree(array, i):
+#   return array[i+1] + array[i+2] + array[i+3] > array[i] + array[i+1] + array[i+2]
+
+# for i in range (len(numArray) - 3):
+#   if compareSumThree(numArray,i):
+#     count = count + 1
+
+
+# A better solution:
+# ------------------
+# for i in range (len(numArray) - 3):
+#   if numArray[i+3] > numArray[i]:
+#     count = count + 1
+
+
+# Or this can be the best:
 def compareSumThree(array, i):
-  return array[i+1] + array[i+2] + array[i+3] > array[i] + array[i+1] + array[i+2]
+  return array[i+3] > array[i]
 
 for i in range (len(numArray) - 3):
   if compareSumThree(numArray,i):

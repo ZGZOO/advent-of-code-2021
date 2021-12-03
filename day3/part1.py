@@ -60,3 +60,4 @@ epsilon_decimal = get_epsilon_from_gamma(gamma_binary, gamma_decimal)
 # Final result
 print("What is the power consumption of the submarine?")
 print(gamma_decimal * epsilon_decimal)
+

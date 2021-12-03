@@ -33,7 +33,9 @@ def get_oxygen(array, columns):
 
         if len(array) == 1:
             break;
-    return array
+
+    # return array
+    return array[0] ### Could just done this (well, it's expected to have only one result in the array,so.)
 
 
 # Get CO2 scrubber rating, return as an array
@@ -53,12 +55,16 @@ def get_co2(array, columns):
 
         if len(array) == 1:
             break;
-    return array
+
+    # return array
+    return array[0]  ### Could just done this (well, it's expected to have only one result in the array,so.)
 
 
 # Transform them into binary
-oxygen_binary = int(get_oxygen(oxygen, binaries_columns)[0])
-co2_binary = int(get_co2(co2, binaries_columns)[0])
+# oxygen_binary = int(get_oxygen(oxygen, binaries_columns)[0])
+# co2_binary = int(get_co2(co2, binaries_columns)[0])
+oxygen_binary = int(get_oxygen(oxygen, binaries_columns)) ### After return line change up there
+co2_binary = int(get_co2(co2, binaries_columns)) ### After return line change up there
 
 
 # Calculate decimal from a binary
